@@ -1,0 +1,201 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Thursday, August 18, 2016 21:32:58}
+%TCIDATA{LastRevised=Monday, August 29, 2016 22:31:39}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{ComputeDefs=
+%$\vspace{1pt}R_{1}=15$
+%1$R_{L}=10$
+%$C=2$
+%2$V_{i}=5$
+%$V_{0}=3.\,\allowbreak 808\,5$
+%$v\left( t\right) =\frac{V_{i}R_{L}}{R_{1}+R_{L}}\left( 1-e^{\frac{-t\left(
+%R_{1}+R_{L}\right) }{CR_{1}R_{L}}}\right) +\left( V_{0}e^{-\frac{t\left(
+%R_{1}+R_{L}\right) }{CR_{1}R_{L}}}\right) $
+%$v_{on}\left( t\right) =\frac{V_{i}R_{L}}{R_{1}+R_{L}}\left( 1-e^{\frac{%
+%-t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}\right) +\left( V_{0}e^{-\frac{%
+%t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}\right) $
+%1$v_{o}\left( t\right) =\frac{V_{i}R_{L}}{R_{1}+R_{L}}\left( 1-e^{\frac{%
+%-t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}\right) +\left( V_{0}e^{-\frac{%
+%t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}\right) $
+%1$v_{f}\left( t\right) =\frac{V_{i}R_{R}}{R_{1}+R_{R}}\left( 1-e^{\frac{%
+%-t\left( R_{1}+R_{R}\right) }{CR_{1}R_{R}}}\right) +\left( V_{0}e^{-\frac{%
+%t\left( R_{1}+R_{R}\right) }{CR_{1}R_{R}}}\right) $
+%1$R_{R}=100$
+%$K_{1}\left( V_{i}\right) =\frac{V_{i}(R_{L})}{R_{1}+R_{L}}$
+%1$V_{i}=5$
+%2$R_{L}=10$
+%$k_{1}=2$
+%$c\left( T\right) =\frac{5\left( \frac{2}{5}+\left( \frac{20}{23}-\frac{2}{5}%
+%\right) e^{-T\left( \frac{1}{12}\right) }-\frac{20}{23}e^{-T\left( \frac{1}{%
+%12}+\frac{23}{600}\right) }\right) }{\left( 1-e^{-T\left( \frac{1}{12}+\frac{%
+%23}{600}\right) }\right) }$
+%}
+
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+
+\section{$\protect\vspace{1pt}$C\'{A}LCULO E SIMULA\c{C}\~{A}O DE RIPPLE}
+
+Autor: Daniel Agnoletto
+
+Objetivo: pesquisa pessoal
+
+No circuito abaixo, uma fonte V$_{\text{in}}$ alimenta uma malha formada por 
+
+um resistor s\'{e}rie e uma carga R$_{\text{L}}$ paralela a um capacitor C.
+Este circuito simula, de forma muito simplificada, o funcionamento de um
+circuito digital, onde chaves internas (mosfets) est\~{a}o constantemente
+ligando e desligando com um per\'{\i}odo T dado pelo clock do circuito (ou
+por um m\'{u}ltiplo deste). Quando a chave S$_{\text{1}}$ est\'{a} aberta, a
+carga R$_{\text{L}}$ possui um valor R$_{\text{Lmin}}$, quando fechada, a
+carga \'{e} R$_{\text{Lmax}}$. O objetivo \'{e} calcular a varia\c{c}\~{a}o
+na tens\~{a}o V$_{\text{out}}$ (ripple) dados os valores de V$_{\text{in}}$,
+R$_{\text{1}}$, R$_{\text{Lmin}}$, R$_{\text{Lmax}}$, C e o per\'{\i}odo do
+chaveamento T. Ap\'{o}s o perfil do ripple ser obtido, uma an\'{a}lise
+espectral da corrente em R$_{\text{1}}$ ser\'{a} realizado para  avaliar
+quais frequ\^{e}ncias comp\~{o}e o sinal e estabelecer como os valores dos
+componentes do circuito influenciam na distribui\c{c}\~{a}o espectral. A
+partir disso, os valores de C e R$_{\text{1}}$ poder\~{a}o ser calculados
+para que os picos de frequ\^{e}ncia sejam os menores poss\'{\i}veis. Os
+resultados desta analise s\~{a}o importantes uma vez que podem ajudar na solu%
+\c{c}\~{a}o de problemas relacionados a emiss\~{o}es eletromagn\'{e}ticas
+(emc).
+
+\begin{center}
+$\vspace{1pt}\FRAME{itbpFU}{4.0698in}{2.4829in}{0in}{\Qcb{Figura 1: modelo
+simplificado de circuito digital}}{}{ckt.bmp}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"F";width 4.0698in;height 2.4829in;depth 0in;original-width
+8.4371in;original-height 5.1249in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";filename 'CKT.bmp';file-properties "XNPEU";}}$
+\end{center}
+
+$\vspace{1pt}$
+
+$\vspace{1pt}$O circuito da Figura 1 foi baseado no modelo representado na
+Figura 2 abaixo. Podemos observar que a alimenta\c{c}\~{a}o do uC foi
+realizada atrav\'{e}s de uma trilha de VCC (em vermelho) e um plano de GND
+(em azul). Al\'{e}m disso, o circuito possui um capacitor C em paralelo com
+os pinos de alimenta\c{c}\~{a}o do circuito integrado. A trilha de VCC
+possui uma resist\^{e}ncia \^{o}hmica R$_{\text{1}}$ do cobre. Este modelo 
+\'{e} incompleto, visto que a trilha tamb\'{e}m possui uma indut\^{a}ncia
+associada. A t\'{\i}tulo de simplicidade, as indut\^{a}ncias n\~{a}o est\~{a}%
+o sendo consideradas nesta primeira an\'{a}lise. Note tamb\'{e}m que n\~{a}o
+est\~{a}o sendo consideradas imped\^{a}ncias no GND pois, por simplicidade,
+admite-se que a imped\^{a}ncia no plano de terra \'{e}, neste caso,
+extremamente baixa para ter efeito significativo.
+
+\vspace{1pt}
+
+\FRAME{dtbpFU}{4.1165in}{2.22in}{0pt}{\Qcb{Figura 2: modelo simples de
+alimenta\c{c}\~{a}o de circuito digital}}{}{frt.bmp}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "F";width 4.1165in;height 2.22in;depth
+0pt;original-width 4.0672in;original-height 2.1793in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename 'frt.bmp';file-properties "XNPEU";}%
+}
+
+$\vspace{1pt}$
+
+$\vspace{1pt}$
+
+$R_{1}=15$
+
+$R_{L}=10$
+
+$C=2$
+
+$V_{i}=5$
+
+$V_{0}=3.\,\allowbreak 808\,5$
+
+$R_{R}=100$
+
+$v_{o}\left( t\right) =\frac{V_{i}R_{L}}{R_{1}+R_{L}}\left( 1-e^{\frac{%
+-t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}\right) +\left( V_{0}e^{-\frac{%
+t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}\right) $
+
+$v_{f}\left( t\right) =\frac{V_{i}R_{R}}{R_{1}+R_{R}}\left( 1-e^{\frac{%
+-t\left( R_{1}+R_{R}\right) }{CR_{1}R_{R}}}\right) +\left( V_{0}e^{-\frac{%
+t\left( R_{1}+R_{R}\right) }{CR_{1}R_{R}}}\right) $
+
+$v_{o}(5)=\allowbreak 1.\,\allowbreak 808\,5e^{-\frac{5}{12}}+2$
+
+$v_{f}\left( 50\right) \allowbreak =\allowbreak \frac{100}{23}%
+-3.\,\allowbreak 666\,3e^{-\frac{23}{12}}\allowbreak =\allowbreak
+3.\,\allowbreak 808\,5$
+
+$v_{o}\left( 50\right) =\allowbreak 1.\,\allowbreak 808\,5e^{-\frac{25}{6}%
+}+2=\allowbreak 2.\,\allowbreak 028$
+
+$k_{1}=\frac{R_{L}}{R_{1}+R_{L}}=\frac{\left( 10\right) }{15+10}=\allowbreak 
+\frac{2}{5}$
+
+$k_{2}=\frac{R_{R}}{R_{1}+R_{R}}=\frac{100}{15+100}=\allowbreak \frac{20}{23}
+$
+
+$T_{1}=\frac{\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}=\frac{\left(
+15+10\right) }{2\left( 15\right) 10}=\allowbreak \frac{1}{12}$
+
+$T_{2}=\frac{\left( R_{1}+R_{R}\right) }{CR_{1}R_{R}}=\frac{\left(
+15+100\right) }{2\left( 15\right) 100}=\allowbreak \frac{23}{600}$
+
+$c\left( T\right) =\frac{5\left( \frac{2}{5}+\left( \frac{20}{23}-\frac{2}{5}%
+\right) e^{-T\left( \frac{1}{12}\right) }-\frac{20}{23}e^{-T\left( \frac{1}{%
+12}+\frac{23}{600}\right) }\right) }{\left( 1-e^{-T\left( \frac{1}{12}+\frac{%
+23}{600}\right) }\right) }$
+
+$c\left( 2\right) =\allowbreak -\frac{1}{e^{-\frac{73}{300}}-1}\left( \frac{%
+54}{23}e^{-\frac{1}{6}}-\frac{100}{23}e^{-\frac{73}{300}}+2\right)
+\allowbreak =V_{c1}\allowbreak =2.\,\allowbreak 679\,1$
+
+$V_{c0}=5\left( \frac{20}{23}\right) +\left( 2.\,\allowbreak 679\,1-5\left( 
+\frac{20}{23}\right) \right) e^{-2\left( \frac{23}{600}\right) }=\allowbreak
+2.\,\allowbreak 802\,3$
+
+$v_{o}\left( 2\right) =2\left( 1-e^{-\frac{1}{6}}\right) +\left( \allowbreak
+2.8023e^{\frac{-1}{6}}\right) =\allowbreak 2.\,\allowbreak 679\,1$
+
+$v_{f}\left( t\right) =\frac{\left( 5\right) \left( 100\right) }{15+100}%
+\left( 1-e^{\frac{-2\left( 15+100\right) }{2\left( 15\right) \left(
+100\right) }}\right) +\left( 2.6791e^{\frac{-2\left( 15+100\right) }{2\left(
+15\right) \left( 100\right) }}\right) =\allowbreak 2.\,\allowbreak 802\,3$
+
+\end{document}
