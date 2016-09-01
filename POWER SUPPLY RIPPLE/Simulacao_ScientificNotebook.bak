@@ -6,7 +6,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, August 18, 2016 21:32:58}
-%TCIDATA{LastRevised=Monday, August 29, 2016 22:31:39}
+%TCIDATA{LastRevised=Wednesday, August 31, 2016 22:32:25}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
 %TCIDATA{CSTFile=Math with theorems suppressed.cst}
@@ -77,7 +77,7 @@ Autor: Daniel Agnoletto
 
 Objetivo: pesquisa pessoal
 
-No circuito abaixo, uma fonte V$_{\text{in}}$ alimenta uma malha formada por 
+No circuito abaixo, uma fonte V$_{\text{in}}$ alimenta uma malha formada por
 
 um resistor s\'{e}rie e uma carga R$_{\text{L}}$ paralela a um capacitor C.
 Este circuito simula, de forma muito simplificada, o funcionamento de um
@@ -89,7 +89,7 @@ carga \'{e} R$_{\text{Lmax}}$. O objetivo \'{e} calcular a varia\c{c}\~{a}o
 na tens\~{a}o V$_{\text{out}}$ (ripple) dados os valores de V$_{\text{in}}$,
 R$_{\text{1}}$, R$_{\text{Lmin}}$, R$_{\text{Lmax}}$, C e o per\'{\i}odo do
 chaveamento T. Ap\'{o}s o perfil do ripple ser obtido, uma an\'{a}lise
-espectral da corrente em R$_{\text{1}}$ ser\'{a} realizado para  avaliar
+espectral da corrente em R$_{\text{1}}$ ser\'{a} realizado para avaliar
 quais frequ\^{e}ncias comp\~{o}e o sinal e estabelecer como os valores dos
 componentes do circuito influenciam na distribui\c{c}\~{a}o espectral. A
 partir disso, os valores de C e R$_{\text{1}}$ poder\~{a}o ser calculados
@@ -119,8 +119,8 @@ possui uma resist\^{e}ncia \^{o}hmica R$_{\text{1}}$ do cobre. Este modelo
 associada. A t\'{\i}tulo de simplicidade, as indut\^{a}ncias n\~{a}o est\~{a}%
 o sendo consideradas nesta primeira an\'{a}lise. Note tamb\'{e}m que n\~{a}o
 est\~{a}o sendo consideradas imped\^{a}ncias no GND pois, por simplicidade,
-admite-se que a imped\^{a}ncia no plano de terra \'{e}, neste caso,
-extremamente baixa para ter efeito significativo.
+admite-se que a imped\^{a}ncia no plano de terra \'{e} extremamente baixa
+para ter efeito significativo.
 
 \vspace{1pt}
 
@@ -134,7 +134,76 @@ alimenta\c{c}\~{a}o de circuito digital}}{}{frt.bmp}{\special{language
 
 $\vspace{1pt}$
 
-$\vspace{1pt}$
+$\vspace{1pt}$Para encontrar a forma de onda da tens\~{a}o V$_{\text{out}}$
+vamos retirar as equa\c{c}\~{o}es para a chave S$_{\text{1}}$ aberta e
+fechada. Para isso, vamos derivar as equa\c{c}\~{o}es genericamente com R$_{%
+\text{L}}$ e posteriormente substituir por R$_{\text{Lmin}}$ e R$_{\text{Lmax%
+}}$. Trabalhando no dom\'{\i}nio da frequ\^{e}ncia e utilizando o teorema
+dos n\'{o}s, temos a seguinte express\~{a}o para a corrente $I\left(
+s\right) $ do resistor $R_{1}$:
+
+\vspace{1pt}
+
+Equa\c{c}\~{a}o 1) $\ \ \ \ \frac{V_{in}\left( s\right) -V_{out}\left(
+s\right) }{R_{1}}=I\left( s\right) $
+
+\vspace{1pt}
+
+O somat\'{o}rio das correntes na carga R$_{\text{L}}$ e no capacitor C nos d%
+\'{a} outra equa\c{c}\~{a}o:
+
+\vspace{1pt}
+
+Equa\c{c}\~{a}o 2) $\ \ \ \ \frac{V_{out}\left( s\right) -\left( \frac{V_{c0}%
+}{s}\right) }{\frac{1}{j\varpi C}}+\frac{V_{out}\left( s\right) }{R_{L}}%
+=I\left( s\right) $
+
+\vspace{1pt}
+
+Onde $V_{c0}$ \'{e} a tens\~{a}o inicial do capacitor.
+
+\vspace{1pt}
+
+$\left( V_{out}\left( s\right) -\left( \frac{V_{c0}}{s}\right) \right)
+j\varpi C+\frac{V_{out}\left( s\right) }{R_{L}}=\frac{V_{in}\left( s\right)
+-V_{out}\left( s\right) }{R_{1}}$
+
+$\left( V_{out}\left( s\right) \right) j\varpi C-\left( \frac{V_{c0}}{s}%
+\right) j\varpi C+\frac{V_{out}\left( s\right) }{R_{L}}+\frac{V_{out}\left(
+s\right) }{R_{1}}=\frac{V_{in}\left( s\right) }{R_{1}}$
+
+$\left( V_{out}\left( s\right) \right) j\varpi CR_{1}-\left( \frac{V_{c0}}{s}%
+\right) j\varpi CR_{1}+\frac{R_{1}}{R_{L}}V_{out}\left( s\right)
++V_{out}\left( s\right) =V_{in}\left( s\right) $
+
+\vspace{1pt}
+
+Logo, a fun\c{c}\~{a}o de transfer\^{e}ncia do circuito \'{e}:
+
+$V_{out}\left( s\right) =\frac{\left( V_{in}\left( s\right)
++V_{c0}CR_{1}\right) R_{L}}{R_{1}+R_{L}+sCR_{1}R_{L}}$
+
+Para uma fonte $V_{in}$ constante:
+
+$V_{in}\left( s\right) =\frac{V_{in}}{s}$
+
+\vspace{1pt}
+
+Neste caso a tens\~{a}o $V_{out}\left( s\right) $ no dom\'{\i}nio da frequ%
+\^{e}ncia \'{e}:
+
+\vspace{1pt}
+
+$V_{out}\left( s\right) =\frac{\left( \frac{V_{in}}{s}+V_{c0}CR_{1}\right)
+R_{L}}{R_{1}+R_{L}+sCR_{1}R_{L}}$
+
+\vspace{1pt}
+
+A transformada inversa (fun\c{c}\~{a}o no dom\'{\i}nio do tempo):
+
+$V_{out}\left( t\right) =\frac{V_{in}R_{L}}{R_{1}+R_{L}}\left( 1-e^{\frac{%
+-t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}\right) +V_{c0}e^{^{\frac{%
+-t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}}$
 
 $R_{1}=15$
 
