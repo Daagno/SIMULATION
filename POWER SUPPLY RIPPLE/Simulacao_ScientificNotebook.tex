@@ -6,7 +6,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, August 18, 2016 21:32:58}
-%TCIDATA{LastRevised=Wednesday, August 31, 2016 22:34:10}
+%TCIDATA{LastRevised=Sunday, September 11, 2016 18:30:25}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
 %TCIDATA{CSTFile=Math with theorems suppressed.cst}
@@ -193,16 +193,175 @@ Neste caso a tens\~{a}o $V_{out}$ no dom\'{\i}nio da frequ\^{e}ncia \'{e}:
 
 \vspace{1pt}
 
-$V_{out}\left( s\right) =\frac{\left( \frac{V_{in}}{s}+V_{c0}CR_{1}\right)
-R_{L}}{R_{1}+R_{L}+sCR_{1}R_{L}}$
+Equa\c{c}\~{a}o 3)$\qquad V_{out}\left( s\right) =\frac{\left( \frac{V_{in}}{%
+s}+V_{c0}CR_{1}\right) R_{L}}{R_{1}+R_{L}+sCR_{1}R_{L}}$
 
 \vspace{1pt}
 
 A transformada inversa (fun\c{c}\~{a}o no dom\'{\i}nio do tempo):
 
-$V_{out}\left( t\right) =\frac{V_{in}R_{L}}{R_{1}+R_{L}}\left( 1-e^{\frac{%
--t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}\right) +V_{c0}e^{^{\frac{%
--t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}}$
+Equa\c{c}\~{a}o 4)$\qquad V_{out}\left( t\right) =\frac{V_{in}R_{L}}{%
+R_{1}+R_{L}}\left( 1-e^{\frac{-t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}%
+}\right) +V_{c0}e^{^{\frac{-t\left( R_{1}+R_{L}\right) }{CR_{1}R_{L}}}}$
+
+\vspace{1pt}
+
+Para S$_{\text{1}}$ fechada temos que $R_{L}=R_{L\min }$ e tens\~{a}o
+inicial do capacitor $V_{c0}=V_{0}:$
+
+$V_{out_{S1F}}\left( t\right) =\frac{V_{in}R_{L\min }}{R_{1}+R_{L\min }}%
+\left( 1-e^{\frac{-t\left( R_{1}+R_{L\min }\right) }{CR_{1}R_{L\min }}%
+}\right) +V_{0}e^{^{\frac{-t\left( R_{1}+R_{L\min }\right) }{CR_{1}R_{L\min }%
+}}}$
+
+Se utilizarmos as constantes $k_{1}=\frac{R_{L\min }}{R_{1}+R_{L\min }}$ e $%
+\tau _{1}=\frac{\left( R_{1}+R_{L\min }\right) }{CR_{1}R_{L\min }}:$
+
+Equa\c{c}\~{a}o 5)$\qquad V_{out_{S1F}}\left( t\right) =V_{in}k_{1}\left(
+1-e^{-t\tau _{1}}\right) +V_{0}e^{-t\tau _{1}}$
+
+\vspace{1pt}
+
+De forma semelhante, para S$_{\text{1}}$ aberta temos:
+
+$k_{2}=\frac{R_{L\max }}{R_{1}+R_{L\max }}$ 
+
+$\tau _{2}=\frac{\left( R_{1}+R_{L\max }\right) }{CR_{1}R_{L\max }}$
+
+\vspace{1pt}
+
+\vspace{1pt}Equa\c{c}\~{a}o 6)$\qquad V_{out_{S1A}}\left( t\right)
+=V_{in}k_{2}\left( 1-e^{-t\tau _{2}}\right) +V_{1}e^{-t\tau _{2}}$
+
+\vspace{1pt}
+
+Onde $V_{1}$ \'{e} a tens\~{a}o inicial do capacitor quando o ciclo com a
+chave S$_{\text{1}}$ aberta \'{e} iniciado. Como a chave est\'{a} sendo
+aberta e fechada com um per\'{\i}odo $T$, a tens\~{a}o inicial do capacitor
+no ciclo seguinte \'{e} a \'{u}ltima tens\~{a}o do capacitor no ciclo
+anterior. No regime transit\'{o}rio, as tens\~{o}es iniciais de cada ciclo
+mudam a cada per\'{\i}odo. No regime estacion\'{a}rio, no entanto, as tens%
+\~{o}es $V_{0}$ e $V_{1}$ s\~{a}o constantes pois o sistema j\'{a} atingiu o
+equil\'{\i}brio.
+
+Assim, no regime estacion\'{a}rio, as tens\~{o}es iniciais $V_{0}$ e $V_{1%
+\text{ }}$s\~{a}o dadas por:
+
+\vspace{1pt}$V_{out_{S1F}}\left( T\right) =V_{1\text{ }}$ para o intervalo
+de tempo $t=T$
+
+$V_{out_{S1A}}\left( T\right) =V_{0\text{ }}$ para o intervalo de tempo $t=T$
+
+Substituindo esta rela\c{c}\~{a}o nas equa\c{c}\~{o}es 5 e 6 temos:
+
+\vspace{1pt}
+
+$V_{in}k_{1}\left( 1-e^{-T\tau _{1}}\right) +V_{0}e^{-T\tau _{1}}=V_{1\text{ 
+}}$
+
+$V_{in}k_{2}\left( 1-e^{-T\tau _{2}}\right) +V_{1}e^{-T\tau _{2}}=V_{0\text{ 
+}}$
+
+\vspace{1pt}
+
+Lembrando que as rela\c{c}\~{a}o s\~{a}o v\'{a}lidas quando o sistema
+estiver estacion\'{a}rio.
+
+Reescrevendo as equa\c{c}\~{o}es acima temos:
+
+Equa\c{c}\~{a}o 7)\qquad $V_{in}k_{1}+\left( V_{0}-V_{in}k_{1}\right)
+e^{-T\tau _{1}}=V_{1\text{ }}$
+
+\qquad \qquad \qquad 
+
+Equa\c{c}\~{a}o 8)\qquad $V_{in}k_{2}+\left( V_{1}-V_{in}k_{2}\right)
+e^{-T\tau _{2}}=V_{0\text{ }}$
+
+\vspace{1pt}
+
+Substituindo as Equa\c{c}\~{o}es 8 em 7, temos as seguintes express\~{o}es
+para $V_{1}$ e $V_{0}$:
+
+\vspace{1pt}
+
+Equa\c{c}\~{a}o 9)\qquad $V_{1}=\frac{V_{in}\left( k_{1}+\left(
+k_{2}-k_{1}\right) e^{-T\tau _{1}}-k_{2}e^{-T\left( \tau _{1}+\tau
+_{2}\right) }\right) }{\left( 1-e^{-T\left( \tau _{1}+\tau _{2}\right)
+}\right) }$
+
+\vspace{1pt}
+
+Equa\c{c}\~{a}o 10)\qquad $V_{0}=\frac{V_{in}\left( k_{2}+\left(
+k_{1}-k_{2}\right) e^{-T\tau _{2}}-k_{1}e^{-T\left( \tau _{1}+\tau
+_{2}\right) }\right) }{\left( 1-e^{-T\left( \tau _{1}+\tau _{2}\right)
+}\right) }$
+
+\vspace{1pt}
+
+O ripple de tens\~{a}o \'{e} dado por:
+
+\vspace{1pt}
+
+$V_{ripple}=V_{1}-V_{0}$
+
+Equa\c{c}\~{a}o 11)$\qquad V_{ripple}=\frac{V_{in}\left( k_{1}-k_{2}\right)
+\left( 1-e^{-T\tau _{1}}-e^{-T\tau _{2}}+e^{-T\left( \tau _{1}+\tau
+_{2}\right) }\right) }{\left( 1-e^{-T\left( \tau _{1}+\tau _{2}\right)
+}\right) }$
+
+\vspace{1pt}
+
+Observe que se o decaimento for acentuado, podemos desconsiderar a
+componente exponencial e o valor do ripple depender\'{a} t\~{a}o somente dos
+valores finais de carga dos capacitores, como era de se esperar. Se o valor
+de $T$ for grande o suficiente, ou os valores de capacit\^{a}ncia e resist%
+\^{e}ncia forem demasiado pequenos, o capacitor vai carregar completamente
+dentro do per\'{\i}odo $T$ e o valor de ripple poder\'{a} ser calculado
+diretamente dos valores finais de carga do capacitor para as situa\c{c}\~{o}%
+es de $R_{L\min }$ e $R_{L\max }$.
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
+
+\vspace{1pt}
 
 $R_{1}=15$
 
