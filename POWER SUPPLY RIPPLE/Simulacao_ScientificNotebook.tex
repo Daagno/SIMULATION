@@ -6,7 +6,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, August 18, 2016 21:32:58}
-%TCIDATA{LastRevised=Sunday, September 11, 2016 18:30:25}
+%TCIDATA{LastRevised=Wednesday, September 14, 2016 23:09:54}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
 %TCIDATA{CSTFile=Math with theorems suppressed.cst}
@@ -224,7 +224,7 @@ Equa\c{c}\~{a}o 5)$\qquad V_{out_{S1F}}\left( t\right) =V_{in}k_{1}\left(
 
 De forma semelhante, para S$_{\text{1}}$ aberta temos:
 
-$k_{2}=\frac{R_{L\max }}{R_{1}+R_{L\max }}$ 
+$k_{2}=\frac{R_{L\max }}{R_{1}+R_{L\max }}$
 
 $\tau _{2}=\frac{\left( R_{1}+R_{L\max }\right) }{CR_{1}R_{L\max }}$
 
@@ -236,31 +236,33 @@ $\tau _{2}=\frac{\left( R_{1}+R_{L\max }\right) }{CR_{1}R_{L\max }}$
 \vspace{1pt}
 
 Onde $V_{1}$ \'{e} a tens\~{a}o inicial do capacitor quando o ciclo com a
-chave S$_{\text{1}}$ aberta \'{e} iniciado. Como a chave est\'{a} sendo
-aberta e fechada com um per\'{\i}odo $T$, a tens\~{a}o inicial do capacitor
-no ciclo seguinte \'{e} a \'{u}ltima tens\~{a}o do capacitor no ciclo
-anterior. No regime transit\'{o}rio, as tens\~{o}es iniciais de cada ciclo
-mudam a cada per\'{\i}odo. No regime estacion\'{a}rio, no entanto, as tens%
-\~{o}es $V_{0}$ e $V_{1}$ s\~{a}o constantes pois o sistema j\'{a} atingiu o
-equil\'{\i}brio.
+chave S$_{\text{1}}$ aberta \'{e} iniciado. Estamos admitindo que o tempo de
+chave aberta \'{e} igual ao tempo de chave fechada $\frac{T}{2}$, ou seja,
+uma onda quadrada. Como a chave est\'{a} sendo aberta e fechada com um per%
+\'{\i}odo $T$, a tens\~{a}o inicial do capacitor no ciclo seguinte \'{e} a 
+\'{u}ltima tens\~{a}o do capacitor no ciclo anterior. No regime transit\'{o}%
+rio, as tens\~{o}es iniciais de cada ciclo mudam a cada per\'{\i}odo. No
+regime estacion\'{a}rio, no entanto, as tens\~{o}es $V_{0}$ e $V_{1}$ s\~{a}%
+o constantes pois o sistema j\'{a} atingiu o equil\'{\i}brio.
 
 Assim, no regime estacion\'{a}rio, as tens\~{o}es iniciais $V_{0}$ e $V_{1%
 \text{ }}$s\~{a}o dadas por:
 
-\vspace{1pt}$V_{out_{S1F}}\left( T\right) =V_{1\text{ }}$ para o intervalo
-de tempo $t=T$
+\vspace{1pt}$V_{out_{S1F}}\left( \frac{T}{2}\right) =V_{1\text{ }}$ para o
+intervalo de tempo $t=\frac{T}{2}$
 
-$V_{out_{S1A}}\left( T\right) =V_{0\text{ }}$ para o intervalo de tempo $t=T$
+$V_{out_{S1A}}\left( \frac{T}{2}\right) =V_{0\text{ }}$ para o intervalo de
+tempo $t=\frac{T}{2}$
 
 Substituindo esta rela\c{c}\~{a}o nas equa\c{c}\~{o}es 5 e 6 temos:
 
 \vspace{1pt}
 
-$V_{in}k_{1}\left( 1-e^{-T\tau _{1}}\right) +V_{0}e^{-T\tau _{1}}=V_{1\text{ 
-}}$
+$V_{in}k_{1}\left( 1-e^{-\frac{T}{2}\tau _{1}}\right) +V_{0}e^{-\frac{T}{2}%
+\tau _{1}}=V_{1\text{ }}$
 
-$V_{in}k_{2}\left( 1-e^{-T\tau _{2}}\right) +V_{1}e^{-T\tau _{2}}=V_{0\text{ 
-}}$
+$V_{in}k_{2}\left( 1-e^{-\frac{T}{2}\tau _{2}}\right) +V_{1}e^{-\frac{T}{2}%
+\tau _{2}}=V_{0\text{ }}$
 
 \vspace{1pt}
 
@@ -269,13 +271,13 @@ estiver estacion\'{a}rio.
 
 Reescrevendo as equa\c{c}\~{o}es acima temos:
 
-Equa\c{c}\~{a}o 7)\qquad $V_{in}k_{1}+\left( V_{0}-V_{in}k_{1}\right)
-e^{-T\tau _{1}}=V_{1\text{ }}$
+Equa\c{c}\~{a}o 7)\qquad $V_{in}k_{1}+\left( V_{0}-V_{in}k_{1}\right) e^{-%
+\frac{T}{2}\tau _{1}}=V_{1\text{ }}$
 
-\qquad \qquad \qquad 
+\qquad \qquad \qquad
 
-Equa\c{c}\~{a}o 8)\qquad $V_{in}k_{2}+\left( V_{1}-V_{in}k_{2}\right)
-e^{-T\tau _{2}}=V_{0\text{ }}$
+Equa\c{c}\~{a}o 8)\qquad $V_{in}k_{2}+\left( V_{1}-V_{in}k_{2}\right) e^{-%
+\frac{T}{2}\tau _{2}}=V_{0\text{ }}$
 
 \vspace{1pt}
 
@@ -285,16 +287,16 @@ para $V_{1}$ e $V_{0}$:
 \vspace{1pt}
 
 Equa\c{c}\~{a}o 9)\qquad $V_{1}=\frac{V_{in}\left( k_{1}+\left(
-k_{2}-k_{1}\right) e^{-T\tau _{1}}-k_{2}e^{-T\left( \tau _{1}+\tau
-_{2}\right) }\right) }{\left( 1-e^{-T\left( \tau _{1}+\tau _{2}\right)
-}\right) }$
+k_{2}-k_{1}\right) e^{-\frac{T}{2}\tau _{1}}-k_{2}e^{-\frac{T}{2}\left( \tau
+_{1}+\tau _{2}\right) }\right) }{\left( 1-e^{-\frac{T}{2}\left( \tau
+_{1}+\tau _{2}\right) }\right) }$
 
 \vspace{1pt}
 
 Equa\c{c}\~{a}o 10)\qquad $V_{0}=\frac{V_{in}\left( k_{2}+\left(
-k_{1}-k_{2}\right) e^{-T\tau _{2}}-k_{1}e^{-T\left( \tau _{1}+\tau
-_{2}\right) }\right) }{\left( 1-e^{-T\left( \tau _{1}+\tau _{2}\right)
-}\right) }$
+k_{1}-k_{2}\right) e^{-\frac{T}{2}\tau _{2}}-k_{1}e^{-\frac{T}{2}\left( \tau
+_{1}+\tau _{2}\right) }\right) }{\left( 1-e^{-\frac{T}{2}\left( \tau
+_{1}+\tau _{2}\right) }\right) }$
 
 \vspace{1pt}
 
@@ -305,9 +307,9 @@ O ripple de tens\~{a}o \'{e} dado por:
 $V_{ripple}=V_{1}-V_{0}$
 
 Equa\c{c}\~{a}o 11)$\qquad V_{ripple}=\frac{V_{in}\left( k_{1}-k_{2}\right)
-\left( 1-e^{-T\tau _{1}}-e^{-T\tau _{2}}+e^{-T\left( \tau _{1}+\tau
-_{2}\right) }\right) }{\left( 1-e^{-T\left( \tau _{1}+\tau _{2}\right)
-}\right) }$
+\left( 1-e^{-\frac{T}{2}\tau _{1}}-e^{-\frac{T}{2}\tau _{2}}+e^{-\frac{T}{2}%
+\left( \tau _{1}+\tau _{2}\right) }\right) }{\left( 1-e^{-\frac{T}{2}\left(
+\tau _{1}+\tau _{2}\right) }\right) }$
 
 \vspace{1pt}
 
@@ -316,14 +318,56 @@ componente exponencial e o valor do ripple depender\'{a} t\~{a}o somente dos
 valores finais de carga dos capacitores, como era de se esperar. Se o valor
 de $T$ for grande o suficiente, ou os valores de capacit\^{a}ncia e resist%
 \^{e}ncia forem demasiado pequenos, o capacitor vai carregar completamente
-dentro do per\'{\i}odo $T$ e o valor de ripple poder\'{a} ser calculado
-diretamente dos valores finais de carga do capacitor para as situa\c{c}\~{o}%
-es de $R_{L\min }$ e $R_{L\max }$.
+dentro do intervalo $\frac{T}{2}$ e o valor de ripple poder\'{a} ser
+calculado diretamente dos valores finais de carga do capacitor para as situa%
+\c{c}\~{o}es de $R_{L\min }$ e $R_{L\max }$.
 
-\vspace{1pt}
+\vspace{1pt}Exemplo:
 
-\vspace{1pt}
+Para $R_{1}=15\Omega $, $R_{L\min }=10\Omega $, $R_{L\max }=100\Omega $, $%
+V_{in}=5V$, $C=100\mu F$, $T=1s$ temos:
 
+$k_{1}=\frac{R_{L\min }}{R_{1}+R_{L\min }}=\frac{10}{15+10}=\allowbreak 
+\frac{2}{5}$
+
+$\tau _{1}=\frac{\left( R_{1}+R_{L\min }\right) }{CR_{1}R_{L\min }}=\frac{%
+\left( 15+10\right) }{100\times 10^{-6}\left( 15\right) \left( 10\right) }%
+=\allowbreak \frac{5000}{3}$
+
+$k_{2}=\frac{R_{L\max }}{R_{1}+R_{L\max }}=\frac{100}{15+100}=\allowbreak 
+\frac{20}{23}$
+
+$\tau _{2}=\frac{\left( R_{1}+R_{L\max }\right) }{CR_{1}R_{L\max }}=\frac{%
+\left( 15+100\right) }{100\times 10^{-6}\left( 15\right) \left( 100\right) }%
+=\allowbreak \frac{2300}{3}$
+
+$V_{0}=\frac{V_{in}\left( k_{2}+\left( k_{1}-k_{2}\right) e^{-\frac{T}{2}%
+\tau _{2}}-k_{1}e^{-\frac{T}{2}\left( \tau _{1}+\tau _{2}\right) }\right) }{%
+\left( 1-e^{-\frac{T}{2}\left( \tau _{1}+\tau _{2}\right) }\right) }=\frac{%
+5\left( \frac{20}{23}+\left( \frac{2}{5}-\frac{20}{23}\right) e^{-\frac{1}{2}%
+\left( \frac{2300}{3}\right) }-\frac{2}{5}e^{-\frac{1}{2}\left( \frac{2300}{3%
+}+\frac{5000}{3}\right) }\right) }{\left( 1-e^{-\frac{1}{2}\left( \frac{2300%
+}{3}+\frac{5000}{3}\right) }\right) }=\allowbreak 4.\allowbreak 347\,8$
+
+$V_{1}=\frac{V_{in}\left( k_{1}+\left( k_{2}-k_{1}\right) e^{-\frac{T}{2}%
+\tau _{1}}-k_{2}e^{-\frac{T}{2}\left( \tau _{1}+\tau _{2}\right) }\right) }{%
+\left( 1-e^{-\frac{T}{2}\left( \tau _{1}+\tau _{2}\right) }\right) }=\frac{%
+5\left( \frac{2}{5}+\left( \frac{20}{23}-\frac{2}{5}\right) e^{-\frac{1}{2}%
+\left( \frac{5000}{3}\right) }-\frac{20}{23}e^{-\frac{1}{2}\left( \frac{2300%
+}{3}+\frac{5000}{3}\right) }\right) }{\left( 1-e^{-\frac{1}{2}\left( \frac{%
+2300}{3}+\frac{5000}{3}\right) }\right) }=\allowbreak 2.0$
+
+$V_{out_{S1F}}\left( t\right) =V_{in}k_{1}+\left( V_{0}-V_{in}k_{1}\right)
+e^{-t\tau _{1}}=5\left( \frac{2}{5}\right) +\left( \allowbreak
+4.3478-5\left( \frac{2}{5}\right) \right) e^{-\frac{5000}{3}t}=$
+
+$\allowbreak 2.\,\allowbreak 347\,8e^{-\frac{5000}{3}t}+2$
+
+$V_{out_{S1A}}\left( t\right) =V_{in}k_{2}+\left( V_{1}-V_{in}k_{2}\right)
+e^{-\frac{T}{2}\tau _{2}}=5\left( \frac{20}{23}\right) +\left( \allowbreak
+2.0-5\left( \frac{20}{23}\right) \right) e^{-\frac{2300}{3}t}=\allowbreak $
+
+$\frac{100}{23}-2.\,\allowbreak 347\,8e^{-\frac{2300}{3}t}\allowbreak $
 
 \vspace{1pt}
 
