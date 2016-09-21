@@ -6,7 +6,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, August 18, 2016 21:32:58}
-%TCIDATA{LastRevised=Wednesday, September 14, 2016 23:09:25}
+%TCIDATA{LastRevised=Tuesday, September 20, 2016 21:31:51}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
 %TCIDATA{CSTFile=Math with theorems suppressed.cst}
@@ -322,7 +322,7 @@ dentro do intervalo $\frac{T}{2}$ e o valor de ripple poder\'{a} ser
 calculado diretamente dos valores finais de carga do capacitor para as situa%
 \c{c}\~{o}es de $R_{L\min }$ e $R_{L\max }$.
 
-\vspace{1pt}Exemplo:
+\vspace{1pt}Exemplo 1:
 
 Para $R_{1}=15\Omega $, $R_{L\min }=10\Omega $, $R_{L\max }=100\Omega $, $%
 V_{in}=5V$, $C=100\mu F$, $T=1s$ temos:
@@ -371,9 +371,55 @@ $\frac{100}{23}-2.\,\allowbreak 347\,8e^{-\frac{2300}{3}t}\allowbreak $
 
 \vspace{1pt}
 
-\vspace{1pt}
+\vspace{1pt}$V_{ripple}=\frac{V_{in}\left( k_{1}-k_{2}\right) \left( 1-e^{-%
+\frac{T}{2}\tau _{1}}-e^{-\frac{T}{2}\tau _{2}}+e^{-\frac{T}{2}\left( \tau
+_{1}+\tau _{2}\right) }\right) }{\left( 1-e^{-\frac{T}{2}\left( \tau
+_{1}+\tau _{2}\right) }\right) }=$
+
+$\frac{5\left( \frac{2}{5}-\frac{20}{23}\right) \left( 1-e^{-\frac{1}{2}%
+\left( \frac{5000}{3}\right) }-e^{-\frac{1}{2}\left( \frac{2300}{3}\right)
+}+e^{-\frac{1}{2}\left( \frac{5000}{3}+\frac{2300}{3}\right) }\right) }{%
+\left( 1-e^{-\frac{1}{2}\left( \frac{5000}{3}+\frac{2300}{3}\right) }\right) 
+}=\allowbreak -2.347\,8$ $V$
 
 \vspace{1pt}
+
+A tens\~{a}o de sa\'{\i}da para o regime estacion\'{a}rio est\'{a}
+representada graficamente 
+
+abaixo. Note que os valores de tens\~{a}o alternam entre $V_{0}$ e $V_{1}$
+entre os intervalos de chave aberta e fechada. Como o decaimento \'{e} r\'{a}%
+pido, os valores finais de tens\~{a}o s\~{a}o alcan\c{c}ados muito antes do
+per\'{\i}odo de chaveamento.
+
+\FRAME{dtbpFX}{4.4996in}{3in}{0pt}{}{}{Plot}{\special{language "Scientific
+Word";type "MAPLEPLOT";width 4.4996in;height 3in;depth 0pt;display
+"USEDEF";plot_snapshots FALSE;mustRecompute FALSE;lastEngine "MuPAD";xmin
+"0";xmax "1";xviewmin "0";xviewmax "1";yviewmin "0";yviewmax
+"5";viewset"XY";rangeset"X";plottype 4;axesFont "Times New
+Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
+"patch";axesstyle "normal";axestips FALSE;xis \TEXUX{t};var1name
+\TEXUX{$t$};function \TEXUX{$\left( \frac{100}{23}-2.\,\allowbreak
+347\,8e^{-\frac{2300}{3}t}\right) \left( \func{Heaviside}\left( t\right)
+-\func{Heaviside}\left( t-0.5\right) \right) $};linecolor "maroon";linestyle
+1;pointstyle "point";linethickness 1;lineAttributes "Solid";var1range
+"0,1";num-x-gridlines 100;curveColor "[flat::RGB:0x00800000]";curveStyle
+"Line";function \TEXUX{$\left( 2.\,\allowbreak
+347\,8e^{-\frac{5000}{3}(t-0.5)}+2\right) \func{Heaviside}\left(
+t-0.5\right) $};linecolor "blue";linestyle 1;pointstyle
+"point";linethickness 1;lineAttributes "Solid";var1range
+"0,1";num-x-gridlines 100;curveColor "[flat::RGB:0x00000080]";curveStyle
+"Line";function \TEXUX{$\left( \func{Heaviside}\left( t\right)
+-\func{Heaviside}\left( t-0.5\right) \right) $};linecolor "black";linestyle
+1;pointstyle "point";linethickness 1;lineAttributes "Solid";var1range
+"0,1";num-x-gridlines 100;curveColor "[flat::RGB:0000000000]";curveStyle
+"Line";function \TEXUX{$\left( 0.5\right) \func{Heaviside}\left(
+t-0.5\right) $};linecolor "black";linestyle 1;pointstyle
+"point";linethickness 1;lineAttributes "Solid";var1range
+"0,1";num-x-gridlines 100;curveColor "[flat::RGB:0000000000]";curveStyle
+"Line";VCamFile 'ODTVWO0M.xvz';}}
+
+\vspace{1pt}O circuito com os valores do Exemplo 1 foi simulado em MatLab:
 
 \vspace{1pt}
 
