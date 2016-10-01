@@ -1,0 +1,10 @@
+Output: Mixed Sim
+Type  : AdvSimNetlist
+From  : Project [RC Circuit.PrjPcb]
+   Generated File[RC Circuit.nsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 23:05:37 On 25/09/2016
